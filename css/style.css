@@ -7,10 +7,68 @@ Dark green: #28b485
 
 */
 /* css reset */
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+}
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+    8. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
 }
 
 body {
@@ -65,15 +123,20 @@ body {
     color: #fff;
     text-transform: uppercase;
 
+    backface-visibility: hidden; /*stop animation unwanted shaking*/
+
     & .heading-primary-main {
       display: block;
       font-size: 60px;
       font-weight: 400;
       letter-spacing: 35px;
 
-      animation-name: moveInLeft;
+      /* animation-name: moveInLeft;
       animation-duration: 1s;
-      animation-timing-function: ease-out;
+      animation-timing-function: ease-out; */
+
+      /* shorthand */
+      animation: moveInLeft 1s ease-out;
     }
 
     & .heading-primary-sub {
@@ -82,9 +145,8 @@ body {
       font-weight: 700;
       letter-spacing: 17.4px;
 
-      animation-name: moveInRight;
-      animation-duration: 1s;
-      animation-timing-function: ease-out;
+      /* shorthand */
+      animation: moveInRight 1s ease-out;
     }
   }
 }
