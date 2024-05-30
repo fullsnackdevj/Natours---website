@@ -149,6 +149,11 @@ body {
       animation: moveInRight 1s ease-out;
     }
   }
+  & .btn:link, /* :link pseudo class is a special state use to an anchor<a> so it functions as a link */
+    & .btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+  }
 }
 
 @keyframes moveInLeft {
@@ -182,11 +187,3 @@ body {
     transform: translate(0);
   }
 }
-
-/* What i learn in this lecture */
-/* 
-A. What pseudo-elements and pseudo-classes are;
-B. How and why to use the ::after pseudo-element
-C. How to create a creative hover animation effect using the transition property.*/
-
-/* Button animation */
