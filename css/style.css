@@ -160,6 +160,10 @@ body {
 
     display: inline-block;
 
+    border-radius: 200px;
+
+    transition: all 0.2s;
+
     /* it'll stuck 
     at the bottom of the <span> sub text, because 
     <a> is an inline element it needs to behave also 
@@ -173,11 +177,11 @@ body {
   & .btn:active {
     transform: translateY(-1px);
   }
-}
 
-.btn-white {
-  background-color: #fff;
-  color: #777;
+  .btn-white {
+    background-color: #fff;
+    color: #777;
+  }
 }
 
 /* start of animations for h1 */
