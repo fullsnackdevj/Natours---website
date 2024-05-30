@@ -20,7 +20,6 @@ Dark green: #28b485
   */
 * {
   margin: 0;
-  padding: 0;
 }
 /*
     Typographic tweaks!
@@ -119,11 +118,15 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 
+  text-align: center; /*  to align everything inside this block to center including the <a> */
+
   & .heading-primary {
     color: #fff;
     text-transform: uppercase;
 
     backface-visibility: hidden; /*stop animation unwanted shaking*/
+
+    margin-bottom: 60px;
 
     & .heading-primary-main {
       display: block;
@@ -153,8 +156,31 @@ body {
     & .btn:visited {
     text-transform: uppercase;
     text-decoration: none;
+    padding: 15px 40px;
+
+    display: inline-block;
+
+    /* it'll stuck 
+    at the bottom of the <span> sub text, because 
+    <a> is an inline element it needs to behave also 
+    like a block element to create space */
+  }
+
+  & .btn:hover {
+    transform: translateY(-3px);
+  }
+
+  & .btn:active {
+    transform: translateY(-1px);
   }
 }
+
+.btn-white {
+  background-color: #fff;
+  color: #777;
+}
+
+/* start of animations for h1 */
 
 @keyframes moveInLeft {
   0% {
@@ -187,3 +213,5 @@ body {
     transform: translate(0);
   }
 }
+
+/* end of animations for h1 */
