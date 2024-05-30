@@ -32,4 +32,10 @@ body {
     url(../img/hero.jpg);
   background-size: cover; /* whatever the width of the viewport it always try to fit. */
   background-position: top;
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 200px,
+    0 100%
+  ); /* https://bennettfeely.com/clippy/ */
 }
