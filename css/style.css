@@ -23,6 +23,7 @@ body {
 }
 
 .header {
+  /*parent element */
   height: 95vh; /*95% of viewport height */
   background-image: linear-gradient(
       to right bottom,
@@ -38,4 +39,18 @@ body {
     100% 75%,
     0 100%
   ); /* https://bennettfeely.com/clippy/ */
+
+  position: relative;
+}
+
+/* the easiest way to center anything with the transform , top and left properties */
+
+.logo-box {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+
+  & .logo {
+    height: 35px;
+  }
 }
